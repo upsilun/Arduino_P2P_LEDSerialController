@@ -1,7 +1,7 @@
 <h1 align="center">P2P LED Control</h1>
 
 <p align="center">
-  <img src="arduino_logo.png" alt="Arduino Logo" width="200">
+  <img src="arduino_logo.png" alt="" width="200">
 </p>
 
 <p align="center">🌟 Remote control of an LED connected to an Arduino board over a P2P network! 🌟</p>
