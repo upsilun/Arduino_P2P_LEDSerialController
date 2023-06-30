@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P2P Server Control</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>P2P Server Control</h1>
+  <button id="onButton">Turn On</button>
+  <button id="offButton">Turn Off</button>
+
+  <script>
+    $(document).ready(() => {
+      $('#onButton').click(() => {
+        sendCommand('on');
+      });
+
+      $('#offButton').click(() => {
+        sendCommand('off');
+      });
+
+      function sendCommand(command) {
+        $.ajax({
+          url: '/command',
+          method: 'POST',
+          data: { command: command },
+          success: (response) => {
+            console.log(response);
+          },
+          error: (error) => {
+            console.log(error.responseText);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
